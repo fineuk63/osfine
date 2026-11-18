@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10264d">
+<title>FINE — Your World, One Browser</title>
+<style>
+:root{--navy:#10264d;--blue:#2463c5;--blue2:#3979e8;--red:#d94b58;--ink:#17243b;--muted:#6c7890;--line:#e5eaf2;--bg:#f5f7fb;--white:#fff;--green:#16865b;--shadow:0 16px 45px rgba(24,48,88,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+.topbar{height:74px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,76px);position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:11px;font-size:25px;font-weight:850;letter-spacing:-1px;color:var(--navy)}.brandmark{width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#173d79,#2d70d5);color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 7px 18px #1d4c9230}
+.nav{display:flex;align-items:center;gap:27px;color:#536078;font-size:14px;font-weight:600}.nav a:hover{color:var(--blue)}.nav-actions{display:flex;gap:10px;align-items:center}.btn{border:0;border-radius:11px;padding:11px 17px;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-outline{background:#fff;border:1px solid var(--line);color:var(--navy)}.btn-primary{background:var(--blue);color:#fff;box-shadow:0 7px 18px #2463c530}.menu{display:none;background:none;border:0;font-size:24px;color:var(--navy)}
+.hero{background:radial-gradient(circle at 80% 20%,#315fa0 0,transparent 30%),linear-gradient(125deg,#0d2042,#173d75 62%,#2459a5);color:#fff;padding:76px clamp(20px,7vw,100px) 84px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff18;border-radius:50%;right:-90px;bottom:-260px;box-shadow:0 0 0 50px #ffffff08,0 0 0 100px #ffffff05}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff35;background:#ffffff12;padding:8px 12px;border-radius:30px;color:#dce9ff;font-size:12px;font-weight:700;letter-spacing:.5px}.dot{width:7px;height:7px;border-radius:50%;background:#65e0a8;box-shadow:0 0 0 4px #65e0a822}
+h1{font-size:clamp(42px,5vw,66px);line-height:1.04;letter-spacing:-2.6px;margin:23px 0 18px;max-width:650px}.hero p{font-size:17px;line-height:1.7;color:#d4e1f6;max-width:590px;margin:0 0 28px}.searchbox{display:flex;align-items:center;gap:12px;background:#fff;border-radius:15px;padding:8px 9px 8px 17px;max-width:620px;box-shadow:0 16px 35px #071a3b45}.searchbox span{font-size:19px;color:#71809a}.searchbox input{border:0;outline:0;min-width:0;flex:1;color:var(--ink);padding:10px 0}.searchbox button{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:13px 19px;font-weight:700}.quicklinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:21px;color:#d6e3f8;font-size:13px}.quicklinks a:hover{text-decoration:underline}
+.browser-card{background:#fff;border:1px solid #ffffff70;border-radius:20px;padding:14px;box-shadow:0 28px 65px #071a3b55;transform:rotate(1deg)}.browser-top{display:flex;gap:6px;align-items:center;padding:3px 3px 13px}.browser-top i{width:8px;height:8px;border-radius:50%;background:#d6deeb}.address{margin-left:10px;background:#f1f4f9;border-radius:8px;padding:8px 12px;color:#7a879b;font-size:11px;flex:1}.browser-content{background:#f6f8fc;border-radius:13px;padding:23px 18px 18px;text-align:center;color:var(--ink)}.mini-logo{font-weight:900;font-size:32px;color:#2459a5;letter-spacing:-1px}.browser-content h3{margin:5px 0;font-size:17px}.browser-content p{font-size:11px;color:#8190a6;margin:0 auto 18px}.mini-search{background:#fff;border:1px solid #e5eaf2;border-radius:9px;padding:11px;text-align:left;color:#9aa5b7;font-size:11px;box-shadow:0 4px 12px #193d7510}.mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:18px}.mini-tile{background:#fff;border:1px solid #edf0f5;border-radius:10px;padding:12px 3px;font-size:10px;color:#5f6d84}.mini-tile b{display:block;font-size:18px;margin-bottom:5px;color:#2b5fa8}
+.section{max-width:1180px;margin:auto;padding:76px 24px}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;color:var(--blue);font-weight:800}.section h2{font-size:clamp(29px,3vw,39px);letter-spacing:-1.2px;margin:10px 0;color:var(--navy)}.section-head p{color:var(--muted);line-height:1.7;margin:0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{background:#fff;border:1px solid var(--line);border-radius:17px;padding:23px;box-shadow:0 5px 18px #203b6410;transition:.2s}.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.icon{width:46px;height:46px;border-radius:13px;background:#edf3ff;color:#245fc0;display:grid;place-items:center;font-size:22px;margin-bottom:17px}.feature h3{font-size:16px;margin:0 0 8px;color:var(--navy)}.feature p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+.security{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.security-wrap{max-width:1180px;margin:auto;padding:72px 24px;display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.security h2{font-size:38px;line-height:1.12;letter-spacing:-1.3px;color:var(--navy);margin:12px 0}.security-copy p{color:var(--muted);line-height:1.7}.security-list{display:grid;grid-template-columns:1fr 1fr;gap:13px}.security-item{display:flex;gap:12px;background:#f7f9fc;border:1px solid var(--line);border-radius:13px;padding:15px}.check{color:var(--green);font-weight:900;font-size:18px}.security-item b{display:block;font-size:13px;color:var(--navy);margin-bottom:4px}.security-item small{font-size:11px;line-height:1.5;color:var(--muted)}
+.privacy-note{margin-top:18px;padding:13px 15px;border-radius:12px;background:#edf8f3;color:#27664c;font-size:12px;line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.number{font-size:12px;font-weight:900;color:var(--blue);background:#edf3ff;border-radius:8px;padding:7px 10px;display:inline-block}.step h3{color:var(--navy);font-size:16px;margin:15px 0 7px}.step p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.cta{max-width:1132px;margin:0 auto 75px;background:linear-gradient(115deg,#142e5c,#2463bd);border-radius:22px;padding:40px 45px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:30px;margin:0 0 8px;letter-spacing:-.8px}.cta p{color:#d5e3fa;margin:0;font-size:14px}.cta .btn{background:#fff;color:#1d4f9c;padding:13px 20px;white-space:nowrap}
+footer{background:#0d1d38;color:#c3cee0;padding:38px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;align-items:center}.footer-brand{color:#fff;font-size:21px;font-weight:850}.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px}.footer-links a:hover{color:#fff}.copyright{font-size:11px;color:#8190aa;margin-top:15px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#142b50;color:#fff;padding:12px 18px;border-radius:12px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:50;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.nav{gap:14px}.features{grid-template-columns:repeat(2,1fr)}.hero-inner{gap:30px}.security-wrap{gap:30px}}
+@media(max-width:680px){.topbar{height:65px}.nav{display:none;position:absolute;top:65px;left:0;right:0;background:#fff;padding:18px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav.open{display:flex}.nav-actions .btn-outline{display:none}.menu{display:block}.hero{padding-top:55px;padding-bottom:58px}.hero-inner{grid-template-columns:1fr}.browser-card{max-width:470px;margin:0 auto;width:100%;transform:none}h1{letter-spacing:-1.7px}.security-wrap{grid-template-columns:1fr}.security-list{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.cta{margin:0 16px 55px;padding:28px;display:block}.cta .btn{margin-top:20px}.footer-inner{display:block}.footer-links{margin-top:20px}.section{padding:58px 18px}}
+@media(max-width:420px){.features{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:16px}.security-list{grid-template-columns:1fr}.searchbox{gap:7px;padding-left:12px}.searchbox button{padding:12px}.quicklinks{gap:12px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="FINE home"><span class="brandmark">F</span>FINE</a>
+  <nav class="nav" id="nav">
+    <a href="#features">Features</a><a href="#security">Security</a><a href="#privacy">Privacy</a><a href="#about">About FINE</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn btn-outline" onclick="notify('Account registration will be connected in the full application.')">Sign in</button>
+    <button class="btn btn-primary" onclick="notify('Welcome to FINE! Registration is a planned feature.')">Get started</button>
+    <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+<main id="home">
+<section class="hero">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow"><span class="dot"></span> A simpler, safer way to explore</div>
+   <h1>Your digital world.<br>One beautiful browser.</h1>
+   <p>Meet FINE — a clean, modern browser concept bringing web browsing, helpful AI, communication, files and security together in one easy place.</p>
+   <form class="searchbox" id="searchForm">
+    <span>⌕</span><input id="searchInput" aria-label="Search the web" placeholder="Search the web or enter a website…" autocomplete="off">
+    <button type="submit">Search</button>
+   </form>
+   <div class="quicklinks"><a href="#features">Explore features</a><a href="#security">Security protection</a><a href="#privacy">Privacy first</a></div>
+  </div>
+  <div class="browser-card" aria-label="FINE browser interface preview">
+   <div class="browser-top"><i></i><i></i><i></i><div class="address">🔒  Search or enter website address</div></div>
+   <div class="browser-content">
+    <div class="mini-logo">FINE</div><h3>Explore the Internet</h3><p>Fast browsing. Smart tools. More control.</p>
+    <div class="mini-search">⌕ &nbsp; Search anything or enter a website…</div>
+    <div class="mini-grid">
+     <div class="mini-tile"><b>◎</b>Web</div><div class="mini-tile"><b>✦</b>AI helper</div><div class="mini-tile"><b>▣</b>Messages</div><div class="mini-tile"><b>↓</b>Downloads</div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="features">
+ <div class="section-head"><div class="kicker">Everything in one place</div><h2>More than a browser. Still simple.</h2><p>Useful tools are organised into clear spaces, so your everyday tasks stay easy to find.</p></div>
+ <div class="features">
+  <article class="feature"><div class="icon">⌕</div><h3>Smart browsing</h3><p>Search, open websites, use tabs, save bookmarks and revisit browsing history.</p></article>
+  <article class="feature"><div class="icon">✦</div><h3>AI assistant</h3><p>Get help with research, writing, explanations, translation and everyday tasks.</p></article>
+  <article class="feature"><div class="icon">▣</div><h3>Messages & calls</h3><p>A planned communication space for text, voice messages, file sharing and calls.</p></article>
+  <article class="feature"><div class="icon">✉</div><h3>Email</h3><p>Bring inbox, sent messages, drafts and attachments into a convenient workspace.</p></article>
+  <article class="feature"><div class="icon">↓</div><h3>Downloads</h3><p>Organise downloaded files and review them before opening or installing.</p></article>
+  <article class="feature"><div class="icon">▤</div><h3>Software centre</h3><p>Find and manage compatible applications with clear installation permissions.</p></article>
+  <article class="feature"><div class="icon">▧</div><h3>Files & office</h3><p>Access documents, spreadsheets, PDFs, folders and supported media files.</p></article>
+  <article class="feature"><div class="icon">⌘</div><h3>Connected devices</h3><p>Help manage supported printers, scanners, cameras and other connected devices.</p></article>
+ </div>
+</section>
+
+<section class="security" id="security">
+ <div class="security-wrap">
+  <div class="security-copy"><div class="kicker">FINE Security Shield</div><h2>Protection built around your control.</h2><p>FINE is designed with layered security principles to help reduce risks from unsafe websites, suspicious downloads and harmful software. A real release would require a maintained security engine, independent testing and operating-system integration.</p><div class="privacy-note">Security status on this concept page is illustrative only. This webpage does not scan your device or provide live antivirus protection.</div></div>
+  <div class="security-list">
+   <div class="security-item"><span class="check">✓</span><div><b>Safer website warnings</b><small>Warn about known phishing and malicious destinations.</small></div></div>
+   <div class="security-item"><span class="check">✓</span><div><b>Download checks</b><small>Check file reputation and signatures before use.</small></div></div>
+   <div class="security-item"><span class="check">✓</span><div><b>Malware scanning</b><small>Integrate trusted scanning and behaviour detection.</small></div></div>
+   <div class="security-item"><span class="check">✓</span><div><b>Quarantine</b><small>Isolate suspicious files pending user review.</small></div></div>
+   <div class="security-item"><span class="check">✓</span><div><b>Ransomware defence</b><small>Support protected folders and suspicious-change alerts.</small></div></div>
+   <div class="security-item"><span class="check">✓</span><div><b>Security updates</b><small>Deliver signed updates and threat intelligence.</small></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="privacy">
+ <div class="section-head"><div class="kicker">Privacy by design</div><h2>Your device. Your data. Your choice.</h2><p>FINE's intended privacy model is transparent: ask before accessing sensitive features, collect only what is needed and give people clear controls.</p></div>
+ <div class="steps">
+  <article class="step"><span class="number">01 / PERMISSIONS</span><h3>No hidden camera or microphone use</h3><p>Camera, microphone, location and file access should require clear permission and visible indicators.</p></article>
+  <article class="step"><span class="number">02 / DATA CONTROL</span><h3>Clear privacy settings</h3><p>Give users control over history, cookies, saved data, sync and optional diagnostics.</p></article>
+  <article class="step"><span class="number">03 / SECURE DESIGN</span><h3>Protect information</h3><p>Use encryption in transit and at rest, secure authentication and minimal data collection.</p></article>
+ </div>
+</section>
+
+<section class="cta" id="about">
+ <div><h2>Welcome to a better browsing experience.</h2><p>FINE brings your essential digital tools together in one clear, friendly design.</p></div>
+ <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+</section>
+</main>
+<footer>
+ <div class="footer-inner">
+  <div><div class="footer-brand">FINE</div><div class="copyright">© 2026 FINE concept. Built around simplicity, security and user choice.</div></div>
+  <div class="footer-links"><a href="#features">Features</a><a href="#security">Security</a><a href="#privacy">Privacy</a><a href="#about">About</a></div>
+ </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+let toastTimer;
+function notify(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3200)}
+document.getElementById('searchForm').addEventListener('submit',function(e){
+ e.preventDefault();const q=document.getElementById('searchInput').value.trim();
+ if(!q){notify('Enter a search term or website address first.');return}
+ const url=/^https?:\/\//i.test(q)?q:'https://www.google.com/search?q='+encodeURIComponent(q);
+ window.open(url,'_blank','noopener,noreferrer');
+});
+</script>
+</body>
+</html>

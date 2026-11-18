@@ -1,0 +1,484 @@
+{
+  "accounts": {
+    "72841936": {
+      "accountNumber": "72841936",
+      "name": "FINE System Owner",
+      "email": "owner@fine.browser",
+      "mobile": "+92 300 1234567",
+      "country": "Pakistan",
+      "balance": 250000,
+      "recoveryEmail": "owner@fine.browser",
+      "twoFactorEnabled": true,
+      "passkeyConfigured": true,
+      "createdAt": "2026-11-18T00:00:00.000Z",
+      "salt": "finesystemownersalt2026",
+      "pinHash": "0c7e47e1cb4017fc4e1008ac248eb38471cbdcd5a21505c4ba2a94b08f24f0c9",
+      "passwordHash": "0c7e47e1cb4017fc4e1008ac248eb38471cbdcd5a21505c4ba2a94b08f24f0c9",
+      "pinChangeTimestamps": []
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "sess-3cf902d8",
+      "account_no": "72841936",
+      "device_name": "FINE OS Workstation",
+      "ip": "127.0.0.1",
+      "created_at": "2026-11-18T09:49:58.597Z"
+    },
+    {
+      "session_id": "sess-init-01",
+      "account_no": "72841936",
+      "device_name": "FINE Primary Workstation",
+      "ip": "127.0.0.1",
+      "created_at": "2026-11-18T09:49:52.650Z"
+    }
+  ],
+  "aiHistory": [],
+  "securityLogs": [
+    {
+      "log_id": "log-606f5af4",
+      "account_no": "72841936",
+      "ip": "127.0.0.1",
+      "action": "Issued 6-digit recovery OTP for Account hint matching ow***@fine.browser.",
+      "risk_level": "MEDIUM",
+      "blocked": false,
+      "timestamp": "2026-11-18T09:49:58.615Z"
+    },
+    {
+      "log_id": "log-bc00e87f",
+      "account_no": "72841936",
+      "ip": "127.0.0.1",
+      "action": "Successful login on Account #72841936 (PIN).",
+      "risk_level": "LOW",
+      "blocked": false,
+      "timestamp": "2026-11-18T09:49:58.597Z"
+    },
+    {
+      "log_id": "sec-001",
+      "account_no": "72841936",
+      "ip": "127.0.0.1",
+      "action": "FINE Security Core initialized with 10 Zero-Trust layers & IP Shield.",
+      "risk_level": "LOW",
+      "blocked": false,
+      "timestamp": "2026-11-18T09:49:52.651Z"
+    }
+  ],
+  "blockedIps": {},
+  "atmTransactions": [
+    {
+      "transaction_id": "atm-839b30ad",
+      "account_no": "72841936",
+      "amount": 0,
+      "type": "BALANCE",
+      "status": "Completed · Receipt Sent",
+      "timestamp": "2026-11-18 09:49"
+    },
+    {
+      "transaction_id": "atm-seed-101",
+      "account_no": "72841936",
+      "amount": 5000,
+      "type": "WITHDRAW",
+      "status": "Dispensed & Receipt Emailed",
+      "timestamp": "2026-11-17 18:10"
+    }
+  ],
+  "devices": [
+    {
+      "device_id": "dev-nvme",
+      "name": "Primary NVMe System Volume",
+      "status": "Healthy",
+      "updatedAt": "2026-11-18T09:49:52.651Z"
+    },
+    {
+      "device_id": "dev-wifi",
+      "name": "FINE Wi-Fi / Ethernet Adapter",
+      "status": "Connected",
+      "updatedAt": "2026-11-18T09:49:52.651Z"
+    },
+    {
+      "device_id": "dev-atm-card",
+      "name": "FINE Biometric & NFC Card Reader",
+      "status": "Ready",
+      "updatedAt": "2026-11-18T09:49:52.651Z"
+    }
+  ],
+  "vaultSecrets": [
+    {
+      "id": "v-1",
+      "site": "fine.browser",
+      "username": "owner@fine.browser",
+      "password": "•••••••• (Protected)",
+      "updatedAt": "2026-11-18"
+    }
+  ],
+  "mails": [
+    {
+      "id": "mail-1",
+      "folder": "inbox",
+      "from": "FINE System Team",
+      "fromAddress": "platform@fine.browser",
+      "to": "you@fine.browser",
+      "subject": "Welcome to FINE — Unified Computer Platform",
+      "preview": "Explore FINE Browser, Multi-Provider AI, FINE Office (Writer/Sheets/Slides/PDF/Design), Print & Recovery.",
+      "body": "Welcome to FINE.\n\nEverything is unified inside one clean desktop workspace:\n• FINE Browser: Multi-tab browsing, private mode, offline saved pages, PDF viewer, and Chromium-grade protection.\n• FINE AI Assistant: Connect with Google Gemini, ChatGPT, DeepSeek, Meta AI, or FINE Local AI.\n• FINE Office: Local offline editing with Writer, Sheets, Slides, PDF, and Design.\n• FINE Hardware & Print: Manage USB, HDMI, Wi-Fi, Bluetooth, NVMe, printers, and duplex print queues.\n• FINE Recovery: Bootable recovery diagnostics independent of Windows.",
+      "timestamp": "2026-11-18 00:10",
+      "unread": true
+    },
+    {
+      "id": "mail-2",
+      "folder": "inbox",
+      "from": "FINE Security Centre",
+      "fromAddress": "security@fine.browser",
+      "to": "you@fine.browser",
+      "subject": "Threat Definitions & Recovery Snapshot Verified",
+      "preview": "Zero Trust protections, firewall rules, and independent recovery partition are healthy.",
+      "body": "Your FINE Security Centre status:\n\n• Real-Time Protection & Firewall: Active\n• Download & Browser Guard: Active\n• Independent Recovery Partition: Healthy and ready.",
+      "timestamp": "2026-11-17 22:45",
+      "unread": false
+    },
+    {
+      "id": "mail-3",
+      "folder": "sent",
+      "from": "You",
+      "fromAddress": "you@fine.browser",
+      "to": "team@fine.browser",
+      "subject": "Q4 Report Draft & Print Queue",
+      "preview": "Shared the DOCX draft and prepared the A4 duplex print preview in FINE Print.",
+      "body": "The quarterly report is ready inside FINE Writer and queued for A4 duplex printing.",
+      "timestamp": "2026-11-17 19:15",
+      "unread": false
+    },
+    {
+      "id": "mail-4",
+      "folder": "spam",
+      "from": "Urgent Account Verify",
+      "fromAddress": "support@verify-fine-login-urgent.example",
+      "to": "you@fine.browser",
+      "subject": "Action Required: Confirm your 4-digit PIN immediately",
+      "preview": "Blocked by FINE Web & Mail Protection due to credential phishing indicators.",
+      "body": "This message was quarantined automatically because it requested a plain-text PIN from an unverified external domain.",
+      "timestamp": "2026-11-17 14:02",
+      "unread": false
+    }
+  ],
+  "contacts": [
+    {
+      "id": "ct-1",
+      "name": "Elena Vance",
+      "accountNumber": "72841936",
+      "email": "elena@fine.browser",
+      "phone": "+44 7700 900112",
+      "status": "Online",
+      "blocked": false,
+      "favourite": true
+    },
+    {
+      "id": "ct-2",
+      "name": "Marcus Chen",
+      "accountNumber": "73910482",
+      "email": "marcus@fine.browser",
+      "phone": "+44 7700 900248",
+      "status": "Online",
+      "blocked": false,
+      "favourite": true
+    },
+    {
+      "id": "ct-3",
+      "name": "Priya Nair",
+      "accountNumber": "61049275",
+      "email": "priya@fine.browser",
+      "phone": "+44 7700 900391",
+      "status": "Offline",
+      "blocked": false,
+      "favourite": false
+    }
+  ],
+  "files": [
+    {
+      "id": "f-1",
+      "name": "FINE System Specification.docx",
+      "kind": "document",
+      "size": "184 KB",
+      "modified": "2026-11-18",
+      "location": "Local",
+      "protectedFolder": true,
+      "content": "FINE is a unified, secure, and intelligent computer platform combining internet browsing, multi-provider AI, office productivity, hardware management, printing, and independent computer recovery."
+    },
+    {
+      "id": "f-2",
+      "name": "Annual Budget & Operations.xlsx",
+      "kind": "spreadsheet",
+      "size": "92 KB",
+      "modified": "2026-11-17",
+      "location": "Cloud Sync",
+      "protectedFolder": true
+    },
+    {
+      "id": "f-3",
+      "name": "Platform Roadmap Presentation.pptx",
+      "kind": "presentation",
+      "size": "3.2 MB",
+      "modified": "2026-11-17",
+      "location": "Local",
+      "protectedFolder": true
+    },
+    {
+      "id": "f-4",
+      "name": "Network Architecture Blueprint.pdf",
+      "kind": "pdf",
+      "size": "2.4 MB",
+      "modified": "2026-11-16",
+      "location": "Local",
+      "protectedFolder": true
+    },
+    {
+      "id": "f-5",
+      "name": "System Image Snapshot 2026-11-17.finebak",
+      "kind": "backup",
+      "size": "14.8 GB",
+      "modified": "2026-11-17",
+      "location": "Backup Vault",
+      "protectedFolder": true
+    }
+  ],
+  "downloads": [
+    {
+      "id": "dl-1",
+      "fileName": "LibreOffice_26.2_Win_x64.msi",
+      "source": "FINE Software Centre",
+      "size": "342 MB",
+      "status": "Verified Clean",
+      "downloadedAt": "Today, 09:15"
+    },
+    {
+      "id": "dl-2",
+      "fileName": "FINE_Recovery_Boot_ISO.img",
+      "source": "FINE Recovery Feed",
+      "size": "618 MB",
+      "status": "Verified Clean",
+      "downloadedAt": "Yesterday, 21:40"
+    },
+    {
+      "id": "dl-3",
+      "fileName": "Network_Blueprint_v4.pdf",
+      "source": "FINE Mail",
+      "size": "2.4 MB",
+      "status": "Verified Clean",
+      "downloadedAt": "2026-11-16"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "bm-1",
+      "title": "FINE Search & Web",
+      "url": "https://www.google.com",
+      "category": "Search",
+      "module": "browser"
+    },
+    {
+      "id": "bm-2",
+      "title": "FINE AI Assistant",
+      "url": "fine://ai",
+      "category": "Intelligence",
+      "module": "ai"
+    },
+    {
+      "id": "bm-3",
+      "title": "FINE Office Suite",
+      "url": "fine://office",
+      "category": "Productivity",
+      "module": "office"
+    },
+    {
+      "id": "bm-4",
+      "title": "Security Centre",
+      "url": "fine://security",
+      "category": "Protection",
+      "module": "security"
+    },
+    {
+      "id": "bm-5",
+      "title": "Software Centre",
+      "url": "fine://software",
+      "category": "Packages",
+      "module": "software"
+    },
+    {
+      "id": "bm-6",
+      "title": "Laser Tag Arena",
+      "url": "fine://arena",
+      "category": "Multiplayer",
+      "module": "arena"
+    }
+  ],
+  "history": [
+    {
+      "id": "hist-1",
+      "title": "FINE Main Dashboard",
+      "url": "fine://home",
+      "visitedAt": "Just now",
+      "verdict": "Safe"
+    }
+  ],
+  "printJobs": [
+    {
+      "documentName": "FINE Sheets Report.csv",
+      "sourceType": "Spreadsheet",
+      "paperSize": "A4",
+      "colorMode": "Colour",
+      "duplex": false,
+      "content": "Browser Protection Scans     Q1:1240  Q2:1490  Q3:1620  Total:4350\nVerified Software Installs   Q1:42  Q2:58  Q3:74  Total:174\nPrint & PDF Jobs             Q1:115  Q2:138  Q3:164  Total:417\nNew Metric Row               Q1:100  Q2:120  Q3:140  Total:360",
+      "id": "pj-1794994597016",
+      "status": "Queued",
+      "createdAt": "01:36 AM"
+    },
+    {
+      "id": "pj-1",
+      "documentName": "FINE System Specification.docx",
+      "sourceType": "Document",
+      "paperSize": "A4",
+      "colorMode": "Colour",
+      "duplex": true,
+      "status": "Completed",
+      "createdAt": "09:20"
+    },
+    {
+      "id": "pj-2",
+      "documentName": "Network Architecture Blueprint.pdf",
+      "sourceType": "PDF",
+      "paperSize": "A4",
+      "colorMode": "Black & White",
+      "duplex": true,
+      "status": "Queued",
+      "createdAt": "10:05"
+    }
+  ],
+  "quarantine": [
+    {
+      "id": "q-sample-1",
+      "fileName": "invoice_october.pdf.exe",
+      "threatName": "Heuristic.Masquerade.DoubleExtension",
+      "detectionMethod": "Heuristic Analysis",
+      "severity": "High",
+      "detectedAt": "2026-11-17 18:42",
+      "sha256": "8f3b92e1a447c0c19d55a0124b60b7e9112c38f01d45a7c0994f1c2e78b01a44",
+      "status": "Quarantined"
+    }
+  ],
+  "securityLayers": [
+    {
+      "id": "web",
+      "number": "01",
+      "name": "Browser & Web Protection",
+      "description": "Detects phishing websites, malicious redirects, and unsafe web origins before navigation completes.",
+      "enabled": true,
+      "engine": "Zero Trust URL Guard",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "download",
+      "number": "02",
+      "name": "Download Protection",
+      "description": "Inspects downloaded files and archives via SHA-256 hash and heuristics before opening or installing.",
+      "enabled": true,
+      "engine": "Pre-Execution Gate",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "realtime",
+      "number": "03",
+      "name": "Real-Time File Protection",
+      "description": "Monitors file creation, modifications, and suspicious script launches continuously.",
+      "enabled": true,
+      "engine": "Native Service Monitor",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "firewall",
+      "number": "04",
+      "name": "Firewall & Network Control",
+      "description": "Filters inbound and outbound connections, suspicious remote endpoints, and application port access.",
+      "enabled": true,
+      "engine": "Packet & Endpoint Guard",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "installer",
+      "number": "05",
+      "name": "Application Permissions & Signatures",
+      "description": "Verifies publisher digital signatures, requested installer permissions, and package checksums.",
+      "enabled": true,
+      "engine": "Code Signature Verifier",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "ransomware",
+      "number": "06",
+      "name": "Encrypted Storage & Ransomware Shield",
+      "description": "Guards protected folders against unauthorized mass file encryption and anomalous write bursts.",
+      "enabled": true,
+      "engine": "Protected Folder Shield",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "comms",
+      "number": "07",
+      "name": "Encrypted Communications",
+      "description": "Protects FINE Messages, Mail, and Calls with end-to-end transport security and spam screening.",
+      "enabled": true,
+      "engine": "TLS & Identity Guard",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "usb",
+      "number": "08",
+      "name": "Hardware & USB Protection",
+      "description": "Scans removable drives, printers, and peripherals upon attachment before autorun or execution.",
+      "enabled": true,
+      "engine": "Peripheral Inspector",
+      "lastChecked": "Active"
+    },
+    {
+      "id": "updates",
+      "number": "09",
+      "name": "Signed Automatic Updates",
+      "description": "Keeps threat signatures, Chromium engine security patches, and recovery images synchronized.",
+      "enabled": true,
+      "engine": "Signed Feed v2026.11",
+      "lastChecked": "Up to date"
+    },
+    {
+      "id": "recovery",
+      "number": "10",
+      "name": "Backup & Independent Recovery",
+      "description": "Maintains clean snapshots and an OS-independent bootable recovery partition.",
+      "enabled": true,
+      "engine": "Clean Snapshot Vault",
+      "lastChecked": "Configured"
+    }
+  ],
+  "installedPackageIds": [
+    "sw-1",
+    "sw-3",
+    "sw-8"
+  ],
+  "securityEvents": [
+    {
+      "timestamp": "2026-11-18T09:49:58.615Z",
+      "event": "Issued 6-digit recovery OTP for Account hint matching ow***@fine.browser."
+    },
+    {
+      "timestamp": "2026-11-18T09:49:58.597Z",
+      "event": "Successful login on Account #72841936 (PIN)."
+    },
+    {
+      "timestamp": "2026-11-18T09:28:34.339Z",
+      "event": "Threat signature & heuristic engine synchronized (Definitions v2026.11.18-0928)."
+    },
+    {
+      "timestamp": "2026-11-18T09:21:39.890Z",
+      "event": "FINE Security Core initialized with 10 protection layers."
+    }
+  ],
+  "autoStartOnBoot": true
+}

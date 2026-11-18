@@ -1,0 +1,6 @@
+{
+  "name": "FINE — Universal Browser",
+  "description": "Universal browser platform combining intelligent search, AI assistance, connected browser messaging, software management, malware protection, and multiplayer 3D laser tag.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
